@@ -1,0 +1,38 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Airports.xlsx",
+				"container": "testgitcontainer"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "loc",
+				"type": "String"
+			},
+			{
+				"name": "multicity",
+				"type": "String"
+			},
+			{
+				"name": "ctry",
+				"type": "String"
+			},
+			{
+				"name": "type",
+				"type": "String"
+			}
+		]
+	}
+}
