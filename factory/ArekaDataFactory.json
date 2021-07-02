@@ -1,0 +1,9 @@
+{
+	"name": "ArekaDataFactory",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f9ca1513-b9c6-498f-801d-dff597315a5c",
+		"tenantId": "371b310d-cbdd-4910-be43-16b7ff7e3def"
+	}
+}

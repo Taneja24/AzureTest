@@ -1,0 +1,554 @@
+{
+	"name": "InputExcell",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkserviceblobstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "2020 H2 All columns Air Coupon",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "testgitcontainer"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Account Number",
+				"type": "String"
+			},
+			{
+				"name": "Agent ID",
+				"type": "String"
+			},
+			{
+				"name": "Air Booking Code",
+				"type": "String"
+			},
+			{
+				"name": "Air Booking Description",
+				"type": "String"
+			},
+			{
+				"name": "Airline Alliance",
+				"type": "String"
+			},
+			{
+				"name": "Arrival Day of Week",
+				"type": "String"
+			},
+			{
+				"name": "Back Office Tran ID",
+				"type": "String"
+			},
+			{
+				"name": "Booking Date",
+				"type": "String"
+			},
+			{
+				"name": "Booking IATA Number",
+				"type": "String"
+			},
+			{
+				"name": "Booking Method Code",
+				"type": "String"
+			},
+			{
+				"name": "Booking Method Description",
+				"type": "String"
+			},
+			{
+				"name": "Branch ID",
+				"type": "String"
+			},
+			{
+				"name": "CO2e kg",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 01",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 02",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 03",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 04",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 05",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 06",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 07",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 08",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 09",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 10",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 11",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 12",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 13",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 14",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 15",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 16",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 17",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 18",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 19",
+				"type": "String"
+			},
+			{
+				"name": "Client Defined 20",
+				"type": "String"
+			},
+			{
+				"name": "Client Master Code",
+				"type": "String"
+			},
+			{
+				"name": "Client Master Code Name",
+				"type": "String"
+			},
+			{
+				"name": "Client Name",
+				"type": "String"
+			},
+			{
+				"name": "Connection Indicator",
+				"type": "String"
+			},
+			{
+				"name": "Cost Difference",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Airport Pair",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Count",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Level Arrival Date",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Level Arrival Time",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Level Departure Date",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Level Departure Time",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Level Trip Days",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Miles",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Number",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Seat Class",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Service Class - Converted Code",
+				"type": "String"
+			},
+			{
+				"name": "Coupon Service Class - Converted Description",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card Code",
+				"type": "String"
+			},
+			{
+				"name": "Credit Card Number",
+				"type": "String"
+			},
+			{
+				"name": "Days in Country Trip Count",
+				"type": "String"
+			},
+			{
+				"name": "Departure Day of Week",
+				"type": "String"
+			},
+			{
+				"name": "Destination Airport Code",
+				"type": "String"
+			},
+			{
+				"name": "Destination Airport Name",
+				"type": "String"
+			},
+			{
+				"name": "Destination City Name",
+				"type": "String"
+			},
+			{
+				"name": "Destination Country Code",
+				"type": "String"
+			},
+			{
+				"name": "Destination Country Name",
+				"type": "String"
+			},
+			{
+				"name": "Destination Region Name",
+				"type": "String"
+			},
+			{
+				"name": "Destination State-Province Code",
+				"type": "String"
+			},
+			{
+				"name": "E-Ticket",
+				"type": "String"
+			},
+			{
+				"name": "Economy Comparison Fare",
+				"type": "String"
+			},
+			{
+				"name": "Exchange Indicator",
+				"type": "String"
+			},
+			{
+				"name": "Fare Basis Code",
+				"type": "String"
+			},
+			{
+				"name": "Fare by Coupon",
+				"type": "String"
+			},
+			{
+				"name": "Flight Duration",
+				"type": "String"
+			},
+			{
+				"name": "Flight Duration in Minutes",
+				"type": "String"
+			},
+			{
+				"name": "Flight Number",
+				"type": "String"
+			},
+			{
+				"name": "Flown Airline Code",
+				"type": "String"
+			},
+			{
+				"name": "Flown Airline Name",
+				"type": "String"
+			},
+			{
+				"name": "Form of Payment Code",
+				"type": "String"
+			},
+			{
+				"name": "Form of Payment Name",
+				"type": "String"
+			},
+			{
+				"name": "GDS",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 1",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 2",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 3",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 4",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 5",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 6",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 7",
+				"type": "String"
+			},
+			{
+				"name": "Hierarchy 8",
+				"type": "String"
+			},
+			{
+				"name": "Invoice Number",
+				"type": "String"
+			},
+			{
+				"name": "Issue Date",
+				"type": "String"
+			},
+			{
+				"name": "Issuing Country Name",
+				"type": "String"
+			},
+			{
+				"name": "Kilometers",
+				"type": "String"
+			},
+			{
+				"name": "Next Departure Date-Time",
+				"type": "String"
+			},
+			{
+				"name": "O&D Trip Type Description",
+				"type": "String"
+			},
+			{
+				"name": "Operating Airline Code",
+				"type": "String"
+			},
+			{
+				"name": "Operating Airline Name",
+				"type": "String"
+			},
+			{
+				"name": "Organization ID",
+				"type": "String"
+			},
+			{
+				"name": "Origin Airport Code",
+				"type": "String"
+			},
+			{
+				"name": "Origin Airport Name",
+				"type": "String"
+			},
+			{
+				"name": "Origin City Name",
+				"type": "String"
+			},
+			{
+				"name": "Origin Country Code",
+				"type": "String"
+			},
+			{
+				"name": "Origin Country Name",
+				"type": "String"
+			},
+			{
+				"name": "Origin Region Name",
+				"type": "String"
+			},
+			{
+				"name": "Origin State-Province Code",
+				"type": "String"
+			},
+			{
+				"name": "Original Paid Fare",
+				"type": "String"
+			},
+			{
+				"name": "PNR",
+				"type": "String"
+			},
+			{
+				"name": "Point of Sale Fee",
+				"type": "String"
+			},
+			{
+				"name": "Point of Sale Trip Type Description",
+				"type": "String"
+			},
+			{
+				"name": "RC Missed Global Code",
+				"type": "String"
+			},
+			{
+				"name": "RC Missed Global Description",
+				"type": "String"
+			},
+			{
+				"name": "RC Missed Local Code",
+				"type": "String"
+			},
+			{
+				"name": "RC Missed Local Description",
+				"type": "String"
+			},
+			{
+				"name": "RC Realized Global Code",
+				"type": "String"
+			},
+			{
+				"name": "RC Realized Global Description",
+				"type": "String"
+			},
+			{
+				"name": "RC Realized Local Code",
+				"type": "String"
+			},
+			{
+				"name": "RC Realized Local Description",
+				"type": "String"
+			},
+			{
+				"name": "Service Class Code",
+				"type": "String"
+			},
+			{
+				"name": "Service Class Description",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Class Code",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Class Description",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Departure Date",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Designator",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Number",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Paid Fare",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Return Date",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Routing",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Status Code",
+				"type": "String"
+			},
+			{
+				"name": "Ticket Status Description",
+				"type": "String"
+			},
+			{
+				"name": "Ticketing IATA Number",
+				"type": "String"
+			},
+			{
+				"name": "Tickets Used",
+				"type": "String"
+			},
+			{
+				"name": "Tour Code",
+				"type": "String"
+			},
+			{
+				"name": "Transaction Type",
+				"type": "String"
+			},
+			{
+				"name": "Travel Purpose",
+				"type": "String"
+			},
+			{
+				"name": "Travel Type Code",
+				"type": "String"
+			},
+			{
+				"name": "Travel Type Description",
+				"type": "String"
+			},
+			{
+				"name": "Traveler Name",
+				"type": "String"
+			},
+			{
+				"name": "Validating Airline Code",
+				"type": "String"
+			},
+			{
+				"name": "Validating Airline Name",
+				"type": "String"
+			},
+			{
+				"name": "Validating Airline Number",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

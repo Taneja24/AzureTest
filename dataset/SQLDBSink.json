@@ -1,0 +1,17 @@
+{
+	"name": "SQLDBSink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkServiceSqlSink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "order",
+			"table": "orderdetail"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

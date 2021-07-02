@@ -1,0 +1,1658 @@
+{
+	"name": "GitTestPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyDataActivity",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*xlsx",
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Account Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Account Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Agent ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Agent ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Air Booking Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Air Booking Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Air Booking Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Air Booking Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Airline Alliance",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Airline Alliance",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Arrival Day of Week",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Arrival Day of Week",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Back Office Tran ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Back Office Tran ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Booking Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking IATA Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Booking IATA Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking Method Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Booking Method Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking Method Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Booking Method Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Branch ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Branch ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CO2e kg",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CO2e kg",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 01",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 01",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 02",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 02",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 03",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 03",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 04",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 04",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 05",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 05",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 06",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 06",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 07",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 07",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 08",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 08",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 09",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 09",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 10",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 10",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 11",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 11",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 12",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 12",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 13",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 13",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 14",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 14",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 15",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 15",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 16",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 16",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 17",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 17",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 18",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 18",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 19",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 19",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Defined 20",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Defined 20",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Master Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Master Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Master Code Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Master Code Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Client Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Client Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Connection Indicator",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Connection Indicator",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cost Difference",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cost Difference",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Airport Pair",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Airport Pair",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Count",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Level Arrival Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Level Arrival Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Level Arrival Time",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Level Arrival Time",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Level Departure Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Level Departure Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Level Departure Time",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Level Departure Time",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Level Trip Days",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Level Trip Days",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Miles",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Miles",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Seat Class",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Seat Class",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Service Class - Converted Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Service Class - Converted Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Coupon Service Class - Converted Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Coupon Service Class - Converted Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Credit Card Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Credit Card Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Credit Card Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Credit Card Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Days in Country Trip Count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Days in Country Trip Count",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Departure Day of Week",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Departure Day of Week",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination Airport Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination Airport Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination Airport Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination Airport Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination City Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination City Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination Country Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination Country Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination Country Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination Country Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination Region Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination Region Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination State-Province Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Destination State-Province Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "E-Ticket",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "E-Ticket",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Economy Comparison Fare",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Economy Comparison Fare",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Exchange Indicator",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Exchange Indicator",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fare Basis Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fare Basis Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fare by Coupon",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fare by Coupon",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Flight Duration",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Flight Duration",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Flight Duration in Minutes",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Flight Duration in Minutes",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Flight Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Flight Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Flown Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Flown Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Flown Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Flown Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Form of Payment Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Form of Payment Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Form of Payment Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Form of Payment Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GDS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GDS",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 4",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 4",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 5",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 5",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 6",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 6",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 7",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 7",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hierarchy 8",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Hierarchy 8",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Invoice Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Invoice Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Issue Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Issue Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Issuing Country Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Issuing Country Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Kilometers",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Kilometers",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Next Departure Date-Time",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Next Departure Date-Time",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "O&D Trip Type Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "O&D Trip Type Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Operating Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Operating Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Operating Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Operating Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Organization ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Organization ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin Airport Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin Airport Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin Airport Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin Airport Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin City Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin City Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin Country Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin Country Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin Country Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin Country Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin Region Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin Region Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin State-Province Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Origin State-Province Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Original Paid Fare",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Original Paid Fare",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PNR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PNR",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Point of Sale Fee",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Point of Sale Fee",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Point of Sale Trip Type Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Point of Sale Trip Type Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Missed Global Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Missed Global Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Missed Global Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Missed Global Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Missed Local Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Missed Local Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Missed Local Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Missed Local Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Realized Global Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Realized Global Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Realized Global Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Realized Global Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Realized Local Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Realized Local Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RC Realized Local Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "RC Realized Local Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Service Class Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Service Class Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Service Class Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Service Class Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Class Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Class Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Class Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Class Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Departure Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Departure Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Designator",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Designator",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Paid Fare",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Paid Fare",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Return Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Return Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Routing",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Routing",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Status Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Status Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticket Status Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticket Status Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ticketing IATA Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Ticketing IATA Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Tickets Used",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Tickets Used",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Tour Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Tour Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Transaction Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Transaction Type",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Travel Purpose",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Travel Purpose",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Travel Type Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Travel Type Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Travel Type Description",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Travel Type Description",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Traveler Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Traveler Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Validating Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Validating Airline Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Validating Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Validating Airline Name",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Validating Airline Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Validating Airline Number",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "InputExcell",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SQLDBSink",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-06-28T01:49:02Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
