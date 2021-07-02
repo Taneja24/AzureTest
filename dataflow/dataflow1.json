@@ -12,7 +12,11 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "Aggregate1"
@@ -24,7 +28,7 @@
 					"name": "Select1"
 				}
 			],
-			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\t{count loc} = count(loc)) ~> Aggregate1\nAggregate1 derive({upper ctry} = upper(ctry)) ~> DerivedColumn1\nDerivedColumn1 select(mapColumn(\n\t\t{ctry 2} = ctry,\n\t\t{count loc 2} = {count loc},\n\t\t{upper ctry 2} = {upper ctry}\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
+			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\t{count loc} = count(loc)) ~> Aggregate1\nAggregate1 derive({upper ctry} = upper(ctry)) ~> DerivedColumn1\nDerivedColumn1 select(mapColumn(\n\t\t{ctry 2} = ctry,\n\t\t{count loc 2} = {count loc},\n\t\t{upper ctry 2} = {upper ctry}\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1\nSelect1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tstore: 'cache',\n\tformat: 'inline',\n\toutput: false,\n\tsaveOrder: 1) ~> sink1"
 		}
 	}
 }
