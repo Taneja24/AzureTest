@@ -16,9 +16,12 @@
 			"transformations": [
 				{
 					"name": "Aggregate1"
+				},
+				{
+					"name": "DerivedColumn1"
 				}
 			],
-			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\tcolumn1 = count(loc)) ~> Aggregate1"
+			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\tcolumn1 = count(loc)) ~> Aggregate1\nAggregate1 derive(column1 = upper(ctry)) ~> DerivedColumn1"
 		}
 	}
 }
