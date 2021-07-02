@@ -1,8 +1,0 @@
-{
-	"name": "GitTestPipeline",
-	"properties": {
-		"annotations": [],
-		"lastPublishTime": "2021-06-28T01:49:02Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
-}
