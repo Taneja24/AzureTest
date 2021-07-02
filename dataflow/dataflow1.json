@@ -19,9 +19,12 @@
 				},
 				{
 					"name": "DerivedColumn1"
+				},
+				{
+					"name": "Select1"
 				}
 			],
-			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\tcolumn1 = count(loc)) ~> Aggregate1\nAggregate1 derive(column1 = upper(ctry)) ~> DerivedColumn1"
+			"script": "source(output(\n\t\tloc as string,\n\t\tmulticity as string,\n\t\tctry as string,\n\t\ttype as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 aggregate(groupBy(ctry),\n\t{count loc} = count(loc)) ~> Aggregate1\nAggregate1 derive({upper ctry} = upper(ctry)) ~> DerivedColumn1\nDerivedColumn1 select(mapColumn(\n\t\t{ctry 2} = ctry,\n\t\t{count loc 2} = {count loc},\n\t\t{upper ctry 2} = {upper ctry}\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
 		}
 	}
 }
